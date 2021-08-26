@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Ayudante virutal matemático</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="container-title">
+          <div class="title">
+            <img src="assets/img/calculator.png" alt="" />
+            <h1>Calcu<span>lator IA</span></h1>
+          </div>
+        </div>
+      </header>
+
+      <section class="welcome">
+        <div class="container-welcome">
+          <div class="icon-hand">
+            <img src="assets/img/victory.png" alt="" />
+          </div>
+          <p class="welcome-p">
+            Hi, i'm
+            <span>MatchBot.</span>
+            and i'll help you <span>witch math.</span>
+          </p>
+          <div class="icon-hand-2">
+            <img src="assets/img/robots.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="whattodo">
+        <label for="">What are we going to calculate today?</label>
+        <div class="container-options">
+          <input
+            type="button"
+            onclick="geometry()"
+            value="Geometry"
+            id="geometry"
+          />
+          <input type="button" onclick="discount()" value="Discounts" id="discounts" />
+          <input type="button"  onclick="statistics()" value="Statistics" id="statistics" />
+          <input type="button" value="Analysis" id="analysis" onclick="analysisSalary()" />
+        </div>
+      </section>
+
+      <!--Geometria perimetro y area-->
+      <section id="whatdoyouwant">
+        <div class="container-desicion">
+          <h2>Selecciona la figura</h2>
+          <i class="fas fa-shapes"></i>
+        </div>
+
+        <form action="" class="form">
+          <div class="circle" id="circle" onclick="circle()">
+            <i class="fas fa-circle"></i>
+          </div>
+
+          <div class="square" id="square" onclick="squear()">
+            <i class="fas fa-square"></i>
+          </div>
+
+          <div class="triangle" id="triangle" onclick="triangle()">
+            <i class="fas fa-caret-up"></i>
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <div id="display"></div>
+      </section>
+      <section id="squareCalculator">
+        <form action="">
+          <h2>Calcula el área y perímetro de un cuadrado</h2>
+          <label for="InputCuadrado"
+            >Escribe cuánto mide cada lado de tu cuadrado:
+          </label>
+          <input
+            type="number"
+            oninput="calcularPerimetroCuadrado()"
+            name=""
+            id="InputCuadrado"
+          />
+
+          <div class="contenedor-resultado">
+            <p>
+              El resultado del perimetro es :<label for="" id="perimetro">
+              </label>
+            </p>
+
+            <p>El resultado del area es :<label for="" id="area"> </label></p>
+          </div>
+        </form>
+      </section>
+      <section id="circleCalculator">
+        <form action="">
+          <h2>Calcula el perímetro del circulo</h2>
+
+          <label id="" for="radio">Cuál es el perímetro del circulo </label>
+          <input type="number" name="" id="radio" oninput="calcularPerimetroCirculo()"/>
+
+          <div class="contenedor-resultado">
+            <p>
+              El resultado del perímetro es :<label
+                for=""
+                id="perimetroCirculo"
+              >
+              </label>
+            </p>
+            <p>
+              El resultado del área es :<label for="" id="areaCirculo"> </label>
+            </p>
+          </div>
+        </form>
+      </section>
+      <!--triangulo-->
+      <section id="triangleCalculator">
+        <form action="">
+          <h2>Calcula perimetro del triangulo</h2>
+          <div class="container-info-tri">
+            <label for="lado1">
+              Escribe cuánto mide el lado1 de tu triangulo:
+            </label>
+    
+            <input oninput="calcularPerimetroTriangulo()" id="lado1" type="number" name="" id="" />
+    
+            <label for="lado2">
+              Escribe cuánto mide el lado2 de tu triangulo:
+            </label>
+    
+            <input oninput="calcularPerimetroTriangulo()" id="lado2" type="number" name="" id="" />
+    
+            <label  for="base"> Escribe cuánto mide la base de tu triangulo: </label>
+    
+            <input oninput="calcularPerimetroTriangulo()" id="base" type="number" name="" id="" />
+    
+          </div>
+
+            <p>
+              El resultado del perimetro es :<label for="" id="perimetroTriangulo">
+              </label>
+            </p>
+          <h2>Calcula el área de un perimetro</h2>
+    
+            <label for="baseTriangulo">Cuál es la base de tu triángulo</label>
+            <input oninput="calcularAreaTriangulo()" type="number" name="" id="baseTriangulo" />
+    
+            <label for="alturaTriangulo">Cuál es la altura del triangulo</label>
+            <input oninput="calcularAreaTriangulo()" type="number" name="" id="alturaTriangulo" />
+  
+            <div class="ocontenedor-resultado">
+              <p>
+                El resultado del área es :<label for="" id="areaTriangulo"> </label>
+              </p>
+            </div>
+        </form>
+      </section>
+
+      <!--descuentos-->
+      <section id="discountCalculator">
+        <img src="assets/img/sale.png" alt="">
+        <h2>Calcula el precio a pagar de tus produtos
+            con descuento
+        </h2>
+        <form action="">
+
+            <label for="InputPrice">Escribe el precio de tu producto:</label>
+            <input type="number" oninput="onClickButtonPriceDiscount()" name="" id="InputPrice">
+
+            <label for="InputDiscount">Escribe el cupón de descuento del producto</label>
+            <input type="text" name="" oninput="onClickButtonPriceDiscount()" id="InputCoupon">
+
+            <p>El precio con descuento son: <p id="ResultP"></p></p>
+           
+
+        </form>
+    </section>
+
+
+    <!--Promedio mediana y media-->
+    <section id="mediaAritmeticaCalculator">
+      <h2>Calcular el promedio, mediana y moda</h2>
+      <label for="cantidadElementos">Cuántos valores tiene su lista?</label>
+      <input type="number" name="" onchange="imprimirCantidadInputs(this.value)" id="cantidadElementos">
+      <div id="inputs">
+
+      </div> 
+        <button type="button" onclick="agregarLista()">Agregar lista</button>
+     <br>
+      <label for="">Ingrese los valores: </label>
+      <p>El promedio es: <span id="promedio" ></span></p>
+      <p>La moda es: <span id="moda"></span></p>
+      <p>La mediana es: <span id="medianaR"></span></p>
+    </section>
+
+    <!--analysis-->
+
+    <section id="analysisCalculator">
+      <h2>Analisis salarial</h2>
+
+      <label for="">Ingrese cantidad de muestra:</label>
+      <input type="number" name="" onchange="imprimirCantidadMuestra(this.value)" id="cantidadMuestra">
+      <div id="inputsMuestra">
+
+      </div> 
+      <button type="button" onclick="agregarListaMuestra()">Analizar</button>
+      <p>La mediana es: <span id="medianaSalary" ></span></p>
+      <p>El top 10%  es: <span id="top10"></span></p>
+    </section>
+    </div>
+    
+    <footer>derechos @dayan.css</footer>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,385 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+.container{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.container-title{
+    margin-top: 20px;
+    border-bottom: 1px solid rgb(103, 157, 117);
+    border-bottom-left-radius: 40px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.title img {
+    width: 40px;
+}
+.title h1{
+    color: rgb(61, 147, 61);
+}
+.title h1 span{
+    color: rgb(0, 96, 0);
+}
+/*Contenedor del welcome*/
+.container-welcome{
+    display: flex;
+}
+.welcome{
+    margin-top: 40px;
+   
+}
+.icon-hand img {
+    width: 40px;
+    margin: -10px 10px;
+}
+.icon-hand-2 img{
+   width: 40px;
+   margin: 15px 10px;
+}
+
+.welcome-p{
+    font-size: 1.2em;
+    color: rgb(109, 109, 109);
+}
+.welcome-p span {
+     font-weight: bold;
+     color:rgb(130, 160, 130) ;
+}
+
+/*options*/
+
+.whattodo{
+    color: rgb(94, 94, 94);
+    font-size: 1.2em;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+    width: 250px;
+}
+
+.container-options{
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+  
+}
+
+.container-options input{
+    width: 110px;
+    height: 35px;
+    background-color: transparent;
+    color: rgb(130, 160, 130);
+    border: none;
+    border-radius: 10px;
+    
+    -webkit-box-shadow: 0px 5px 9px 2px rgba(68,68,68,0.72); 
+    box-shadow: 0px 5px 9px 2px rgba(68,68,68,0.72);
+}
+.container-options input:hover{
+    cursor: pointer;
+    transition: 0.5s all ease;
+    transform: scale(1.1);
+    background-color: rgb(130, 160, 130) ;
+    animation-duration: 1s;
+    animation-name: colorProgress;
+    color: white;
+}
+
+  @keyframes colorProgress {
+    from {
+        background-color: white ;
+    }
+  
+    to {
+        background-color: rgb(130, 160, 130) ;
+       
+    }
+  }
+
+/*elige figura*/
+.container-desicion{
+   display: flex;
+   width: 300px;
+   text-align: center;
+   margin: 30px auto;
+   justify-content: space-between;
+   color: rgb(91, 90, 90);
+}
+.container-desicion i {
+    font-size: 2em;
+    color: rgb(89, 91, 64);
+}
+.form{
+    display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+margin: 0 auto;
+width: 200px;
+}
+.form i {
+     font-size: 4em;
+     color: rgb(190, 196, 73);
+}
+.form .triangle i{
+    font-size:8em;
+    margin-left: calc(50%);
+    margin-top: -30px;
+}
+.form i:hover{
+    transform: scale(1.2);
+    transition: 0.5s all ease;
+}
+
+/*footer*/
+
+footer{
+    background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+    background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+     height: 30px;
+    margin-top: 30px;
+}
+
+
+/*figures*/
+#whatdoyouwant{
+    display: none;
+}
+#squareCalculator{
+    display: none;
+}
+#squareCalculator{
+text-align: center;
+
+}
+#squareCalculator h2{
+    color: rgb(89, 89, 89);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    word-spacing: 3px;
+    line-height: 2;
+}
+#squareCalculator label{
+    font-size: 1.2em;
+    color: rgb(82, 82, 82);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.contenedor-resultado{
+    display: flex;
+}
+.contenedor-resultado p {
+    font-size: 1.1em;
+    margin: 20px;
+}
+.contenedor-resultado #area, .contenedor-resultado #perimetro{
+    font-size: 1.2em;
+    color:rgb(130, 160, 130) ;
+    font-weight: bold;
+}
+/*circulo*/
+#circleCalculator{
+    display: none;
+}
+/*circle*/
+#circleCalculator h2 {
+    color: rgb(89, 89, 89);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    word-spacing: 3px;
+    line-height: 2;
+}
+
+#circleCalculator label{
+    font-size: 1.2em;
+    color: rgb(82, 82, 82);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+/*triangulo styles*/
+#triangleCalculator h2{
+    color: rgb(89, 89, 89);
+    text-transform: uppercase;
+    margin: 20px;
+    word-spacing: 3px;
+    line-height: 2;
+    text-align: center;
+}
+#triangleCalculator label{
+    font-size: 1.2em;
+    color: rgb(82, 82, 82);
+  margin-top: 0px;
+}
+#triangleCalculator .container-info-tri{
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    grid-column-gap: 0px;
+    grid-row-gap:20px; 
+    margin-bottom: 15px;
+}
+#triangleCalculator{
+    text-align: center;
+    display: none;
+}
+#triangleCalculator input{
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+   
+}
+.contenedor-resultado{
+    text-align: center;
+    margin-top: 15px;
+}
+
+/*discount*/
+#discountCalculator{
+    display: none;
+    text-align: center;
+    
+}
+#discountCalculator form{
+    display: grid; 
+grid-template-columns: 1fr; 
+grid-template-rows: repeat(4, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+#discountCalculator img{
+    width: 40px;
+    text-align: center;
+
+}
+#discountCalculator h2{
+    color: rgb(89, 89, 89);
+    text-transform: uppercase;
+    margin: 20px;
+    word-spacing: 3px;
+    line-height: 1.3;
+}
+#discountCalculator form label{
+    font-size: 1.2em;
+    line-height: 2;
+    color: rgb(96, 94, 94);
+}
+
+#ResultP{
+    margin-top: 10px;
+    color: green;
+}
+#discountCalculator p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/*promedio*/
+#mediaAritmeticaCalculator{
+    display: none;
+    text-align: center;
+}
+#mediaAritmeticaCalculator h2{
+    color: rgb(89, 89, 89);
+    text-transform: uppercase;
+    margin: 20px;
+    word-spacing: 3px;
+    line-height: 1.3;
+    text-align: center;
+}
+#mediaAritmeticaCalculator input{
+    margin-top: 10px;
+    height: 30px;
+    color: teal;
+}
+#mediaAritmeticaCalculator button{
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    color: teal;
+    margin: 10px auto;
+    border: none;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 9px 2px rgba(68,68,68,0.72); 
+    box-shadow: 0px 5px 9px 2px rgba(68,68,68,0.72);
+}
+#inputs input{
+    width: 80px;
+    height: 30px;
+    color: teal;
+    margin:10px 10px;
+}
+#mediaAritmeticaCalculator p {
+    font-size: 1.2em;
+    color: gray;
+    margin-top: 15px;
+}
+#promedio,#moda,#medianaR{
+    color: green;
+    font-size: 1.2em;
+}
+#mediaAritmeticaCalculator label{
+    font-size: 1.1em;
+    color: rgb(77, 76, 76);
+}
+
+/*analisis salarial*/
+#analysisCalculator{
+    display: none;
+    text-align: center;
+}
+#analysisCalculator h2{
+    color: rgb(89, 89, 89);
+    text-transform: uppercase;
+    margin: 20px;
+    word-spacing: 3px;
+    line-height: 1.3;
+}
+#analysisCalculator input{
+    width: 80px;
+    height: 30px;
+    color: teal;
+    margin:10px 10px;
+}
+#analysisCalculator p {
+    font-size: 1.2em;
+    color: gray;
+    margin-top: 15px;
+}
+#medianaSalary,#top10{
+    color: green;
+    font-size: 1.2em;
+}
+#analysisCalculator label{
+    font-size: 1.1em;
+    color: rgb(77, 76, 76);
+}
+#analysisCalculator button{
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    color: teal;
+    margin: 10px auto;
+    border: none;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 9px 2px rgba(68,68,68,0.72); 
+    box-shadow: 0px 5px 9px 2px rgba(68,68,68,0.72);
+}
+/*footer*/
+footer{
+    text-align: center;
+    color: white;
+    font-size: 1.3em;
+}
