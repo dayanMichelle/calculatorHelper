@@ -1,4 +1,11 @@
-# ejerciciosJs
+# calculatorHelper
+Es una ayudante matemático en el cual podrás calcular 
+- figuras :  perimetro y área del circulo, cuadrado y triángulo.
+-  media aritmética: promedio, moda y mediana.
+-  descuentos:  se muestra el total de un precio usando algunos de estos cupones: 
+-  salario: calcula la mediana salarial de los datos ingresados. 
+
+
 ✨ Algunos ejercicios práticos de js
 
 
